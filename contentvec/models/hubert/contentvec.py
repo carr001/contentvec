@@ -726,6 +726,7 @@ class ContentvecModel(BaseFairseqModel):
             logits_B = logits.reshape(-1, logits.size(-1))
         return logits_B
 
+
     def get_targets_ctr(self, net_output):
         logits_list = net_output["score_list"]
         logits = logits_list[0]
